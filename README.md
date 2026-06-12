@@ -45,4 +45,4 @@ https://thenounproject.com/
 ## 備考
 
 - 画像商品はchatGPTで生成されています。
-- ベースになっている商品は、**「NONFICTION」**というブランドの香水。
+- ベースになっているのは、「NONFICTION」というブランドの香水ボトルです。

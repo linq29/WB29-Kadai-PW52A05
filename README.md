@@ -1,7 +1,10 @@
 # WF29-Kadai5-PW52A233
 
-本リポジトリは、授業課題として制作した架空ECサイト「emOCEAN」の情報サイトです。  
-※検索避けのため、リポジトリ名には課題番号を使用しています。
+本リポジトリは、授業課題として制作した架空ECサイト「emOCEAN」です。  
+※検索避けのため、リポジトリ名には課題番号を使用しています。  
+
+
+Figma ▶︎ [WB29-01_PW52A233-05](https://www.figma.com/design/BbfuOfhKdH21gWVtO9GzBy/WB29-01_PW52A233-05?node-id=0-1&t=uKUGLwQvr6ogeEHF-1)
 
 
 ## 概要
@@ -29,6 +32,17 @@
 商用利用や再配布を目的としたものではありません。  
 
 
+## アイコン、画像使用
+
+pexels  
+https://www.pexels.com/ja-jp/
+
+Noun Project  
+https://thenounproject.com/
+
+
+
 ## 備考
 
 - 画像商品はchatGPTで生成されています。
+- ベースになっている商品は、**「NONFICTION」**というブランドの香水。

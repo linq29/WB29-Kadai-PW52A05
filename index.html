@@ -7,23 +7,25 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="emOCEAN home">em<span>OCEAN</span></a>
-    <nav class="header-actions" aria-label="ユーザーメニュー">
+  <header class="header">
+    <a class="header__brand" href="index.html" aria-label="emOCEAN home">
+      <img src="images/logo.png" alt="emOCEAN">
+    </a>
+    <nav class="header__actions" aria-label="ユーザーメニュー">
       <a href="#" aria-label="Account">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+        <img src="images/header__icon-user.png" alt="">
       </a>
       <a href="#" aria-label="Cart">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h15l-2 9H8L6 2H3"></path><circle cx="9" cy="21" r="1.5"></circle><circle cx="18" cy="21" r="1.5"></circle></svg>
+        <img src="images/header__icon-cart.png" alt="">
       </a>
       <a href="#" aria-label="Notification">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg>
+        <img src="images/header__icon-bell.png" alt="">
       </a>
     </nav>
   </header>
 
-  <div class="main">
-    <aside class="side-nav" aria-label="商品カテゴリー">
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="商品カテゴリー">
       <section>
         <h2>カテゴリー</h2>
         <a href="#">O / 開放性</a>
@@ -44,48 +46,48 @@
       </section>
     </aside>
 
-    <main class="content">
+    <main class="page-layout__content">
       <section class="hero">
-        <div class="hero-copy">
-          <p class="hero-logo">em<span>OCEAN</span></p>
+        <div class="hero__copy">
+          <p class="hero__logo">em<span>OCEAN</span></p>
           <p>他人の心の海から掬い上げられた雫を、あなたの心に。</p>
         </div>
       </section>
 
-      <section class="section-block">
-        <h1 class="section-title">新入荷アイテム <span>/ select from new items</span></h1>
-        <div class="product-grid new-items">
+      <section class="section">
+        <h1 class="section__title">新入荷アイテム <span>/ select from new items</span></h1>
+        <div class="product-list product-list--new">
           <a class="product-card" href="detail.html">
-            <img src="images/asset-15-1254x1254-bb3f4d8fa5.jpeg" alt="夜更けの几帳面">
+            <img src="images/item-kichoumen.jpg" alt="夜更けの几帳面">
             <strong>C / 夜更けの几帳面</strong>
             <span>¥ 248,000</span>
           </a>
           <a class="product-card" href="#">
-            <img src="images/asset-14-1254x1254-c8d339662d.jpeg" alt="眠れる反骨心">
+            <img src="images/item-hankotsu.jpg" alt="眠れる反骨心">
             <strong>O / 眠れる反骨心</strong>
             <span>¥ 208,000</span>
           </a>
           <a class="product-card" href="#">
-            <img src="images/asset-12-1254x1254-14873aba42.jpeg" alt="透明な社交欲">
+            <img src="images/item-shakou.jpg" alt="透明な社交欲">
             <strong>E / 透明な社交欲</strong>
             <span>¥ 388,000</span>
           </a>
           <a class="product-card" href="detail.html">
-            <img src="images/asset-16-585x750-ca77db90d1.jpeg" alt="秒針まで揃える執念">
+            <img src="images/item-shunen.jpg" alt="秒針まで揃える執念">
             <strong>C / 秒針まで揃える執念</strong>
             <span>対価要相談</span>
           </a>
           <a class="product-card" href="#">
-            <img src="images/asset-10-1254x1254-411e2dceed.jpeg" alt="逃げ足の冷静さ">
+            <img src="images/item-reisei.jpg" alt="逃げ足の冷静さ">
             <strong>N / 逃げ足の冷静さ</strong>
             <span>¥ 888,000</span>
           </a>
         </div>
       </section>
 
-      <section class="section-block">
-        <h2 class="section-title">emOCEANへようこそ <span>/ know about “emOCEAN”</span></h2>
-        <div class="about-panel">
+      <section class="section">
+        <h2 class="section__title">emOCEANへようこそ <span>/ know about “emOCEAN”</span></h2>
+        <div class="about">
           <img src="images/asset-09-3456x1944-8d9793eb02.jpeg" alt="青い光が差す抽象的な空間">
           <div>
             <h3>心の海の、ひとしずくを</h3>
@@ -96,9 +98,9 @@
         </div>
       </section>
 
-      <section class="section-block">
-        <h2 class="section-title">カテゴリー <span>/ categories</span></h2>
-        <div class="category-grid">
+      <section class="section">
+        <h2 class="section__title">カテゴリー <span>/ categories</span></h2>
+        <div class="category-list">
           <article>
             <img src="images/asset-02-1672x941-776384852c.jpeg" alt="単品カテゴリー">
             <h3>単品</h3>
@@ -119,15 +121,15 @@
     </main>
   </div>
 
-  <footer class="site-footer">
-    <nav aria-label="フッター">
+  <footer class="footer">
+    <nav class="footer__nav" aria-label="フッター">
       <a href="#">Legal Notice</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Refund &amp; Shipping</a>
       <a href="#">Contact</a>
       <a href="#">About</a>
     </nav>
-    <small>Copyright © 2026, emOCEAM by LIN</small>
+    <small class="footer__copyright">Copyright © 2026, emOCEAM by LIN</small>
   </footer>
 </body>
 </html>

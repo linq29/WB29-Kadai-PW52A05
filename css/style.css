@@ -38,6 +38,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  filter: drop-shadow(0 0 5px #16DBFD);
 }
 
 [lang="en"] {
@@ -59,6 +64,7 @@ img {
   padding: 12px var(--grid-margin);
   background: linear-gradient(90deg, rgba(2, 13, 24, 0.96), rgba(31, 52, 83, 0.96), rgba(3, 13, 24, 0.96));
 }
+
 .header__brand {
   grid-column: 1 / span 2;
   height: 20px;
@@ -68,13 +74,13 @@ img {
   width: auto;
   height: 100%;
   filter: none;
-  transition: filter 0.4s ease;
+  /* transition: filter 0.3s ease; */
 }
 
-.header__brand:hover img,
+/* .header__brand:hover img,
 .header__brand:focus-visible img {
   filter: drop-shadow(0 0 5px #16DBFD);
-}
+} */
 
 .header__brand span {
   font-size: 1.05em;
@@ -101,7 +107,7 @@ img {
   height: 34px;
   object-fit: contain;
   filter: none;
-  transition: filter 0.4s ease;
+  transition: filter 0.3s ease;
 }
 
 .header__actions a:hover img,
@@ -122,7 +128,7 @@ img {
   color: #eef6ff;
 }
 
-.sidebar section + section {
+.sidebar section+section {
   margin-top: 20px;
 }
 
@@ -308,6 +314,11 @@ img {
   font-weight: 700;
 }
 
+.breadcrumb__separator {
+  color: var(--accent);
+  margin-inline: 0.4em;
+}
+
 .product-detail {
   grid-column: 1 / -1;
   display: grid;
@@ -332,12 +343,6 @@ img {
   font-size: var(--font-heading-size);
   font-weight: var(--font-heading-weight);
   line-height: 1.28;
-  text-shadow: none;
-  transition: text-shadow 0.4s ease;
-}
-
-.product-detail:hover .product-detail__info h1,
-.product-detail:focus-within .product-detail__info h1 {
   text-shadow: var(--glow);
 }
 
@@ -348,7 +353,7 @@ img {
 
 .product-detail__info h2 {
   margin: 26px 0 12px;
-  font-size: var(--font-heading-size);
+  font-size: 16px;
   font-weight: var(--font-heading-weight);
 }
 
@@ -367,11 +372,22 @@ button {
   font: inherit;
 }
 
-.product-detail__sizes button {
+.product-detail__size-button {
   height: 44px;
   color: var(--text);
   background: transparent;
   border: 1px solid var(--line);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-detail__size-button:hover {
+  box-shadow: 0 0 10px #16DBFD;
+}
+
+.product-detail__size-button--selected {
+  color: #194b80;
+  background: #fff;
 }
 
 .product-detail__cart-button {
@@ -383,7 +399,7 @@ button {
   border: 1px solid var(--accent);
   box-shadow: none;
   font-weight: 800;
-  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .product-detail__cart-button:hover,
@@ -419,7 +435,7 @@ summary::after {
 details p {
   margin: 0 0 14px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .review-list {

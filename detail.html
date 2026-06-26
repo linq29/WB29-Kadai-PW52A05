@@ -54,7 +54,13 @@
 
     <main class="grid__content">
       <nav class="breadcrumb" aria-label="パンくず">
-        <a href="index.html">トップ</a> &gt; カテゴリー &gt; 単品 &gt; C / 誠実性
+        <a href="index.html">トップ</a>
+        <span class="breadcrumb__separator">&gt;</span>
+        <a href="#">カテゴリー</a>
+        <span class="breadcrumb__separator">&gt;</span>
+        <a href="#">単品</a>
+        <span class="breadcrumb__separator">&gt;</span>
+        <a href="#">C / 誠実性</a>
       </nav>
       <section class="product-detail">
         <img class="product-detail__image" src="images/item-kichoumen.jpg" alt="夜更けの几帳面">
@@ -63,10 +69,10 @@
           <p class="product-detail__price">¥ 888,000 (税込)</p>
           <h2>規格</h2>
           <div class="product-detail__sizes">
-            <button>1ml</button>
-            <button>3ml</button>
-            <button>5ml</button>
-            <button>7ml</button>
+            <button class="product-detail__size-button product-detail__size-button--selected" type="button" aria-pressed="true">1ml</button>
+            <button class="product-detail__size-button" type="button" aria-pressed="false">3ml</button>
+            <button class="product-detail__size-button" type="button" aria-pressed="false">5ml</button>
+            <button class="product-detail__size-button" type="button" aria-pressed="false">7ml</button>
           </div>
           <h2>説明</h2>
           <p>ここには、商品詳細ページに掲載する、出品者が書いたアイテム説明文が入ります。<br>出品者から提供された性格の特性や、アイテムの特徴、使用時のイメージ、注意事項などを200文字程度で記載します。<br>サイト全体の世界観に合わせ、神秘的でやさしく、少し物語性のある表現を想定しています。</p>
@@ -125,6 +131,19 @@
         href="#" lang="en">Refund &amp; Shipping</a><a href="#" lang="en">Contact</a><a href="#" lang="en">About</a></nav>
     <small class="footer__copyright">Copyright © 2026, emOCEAM by LIN</small>
   </footer>
+  <script>
+    document.querySelectorAll(".product-detail__size-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".product-detail__size-button").forEach((sizeButton) => {
+          sizeButton.classList.remove("product-detail__size-button--selected");
+          sizeButton.setAttribute("aria-pressed", "false");
+        });
+
+        button.classList.add("product-detail__size-button--selected");
+        button.setAttribute("aria-pressed", "true");
+      });
+    });
+  </script>
 </body>
 
 </html>

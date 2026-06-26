@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>emOCEAN</title>
+  <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400&family=M+PLUS+1p:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="header">
     <a class="header__brand" href="index.html" aria-label="emOCEAN home">
@@ -13,18 +21,18 @@
     </a>
     <nav class="header__actions" aria-label="ユーザーメニュー">
       <a href="#" aria-label="Account">
-        <img src="images/header__icon-user.png" alt="">
+        <img src="images/header__icon-user.png" alt="アカウント">
       </a>
       <a href="#" aria-label="Cart">
-        <img src="images/header__icon-cart.png" alt="">
+        <img src="images/header__icon-cart.png" alt="カート">
       </a>
       <a href="#" aria-label="Notification">
-        <img src="images/header__icon-bell.png" alt="">
+        <img src="images/header__icon-bell.png" alt="お知らせ">
       </a>
     </nav>
   </header>
 
-  <div class="page-layout">
+  <div class="grid">
     <aside class="sidebar" aria-label="商品カテゴリー">
       <section>
         <h2>カテゴリー</h2>
@@ -46,16 +54,16 @@
       </section>
     </aside>
 
-    <main class="page-layout__content">
+    <main class="grid__content">
       <section class="hero">
         <div class="hero__copy">
-          <p class="hero__logo">em<span>OCEAN</span></p>
-          <p>他人の心の海から掬い上げられた雫を、あなたの心に。</p>
+          <img class="hero__logo" src="images/logo.png" alt="emOCEAN">
+          <p class="hero__tagline">他人の心の海から掬い上げられた雫を、あなたの心に。</p>
         </div>
       </section>
 
       <section class="section">
-        <h1 class="section__title">新入荷アイテム <span>/ select from new items</span></h1>
+        <h1 class="section__title">新入荷アイテム<span lang="en">/ select from new items</span></h1>
         <div class="product-list product-list--new">
           <a class="product-card" href="detail.html">
             <img src="images/item-kichoumen.jpg" alt="夜更けの几帳面">
@@ -86,10 +94,10 @@
       </section>
 
       <section class="section">
-        <h2 class="section__title">emOCEANへようこそ <span>/ know about “emOCEAN”</span></h2>
+        <h2 class="section__title">emOCEANへようこそ<span lang="en">/ know about “emOCEAN”</span></h2>
         <div class="about">
           <div class="about__image">
-            <img src="images/asset-09-3456x1944-8d9793eb02.jpeg" alt="青い光が差す抽象的な空間">
+            <img src="images/about-image.jpg" alt="emOCEANについて">
           </div>
           <div class="about__text">
             <h3>心の海の、ひとしずくを</h3>
@@ -101,23 +109,23 @@
       </section>
 
       <section class="section">
-        <h2 class="section__title">カテゴリー <span>/ categories</span></h2>
+        <h2 class="section__title">カテゴリー<span lang="en">/ categories</span></h2>
         <div class="category-list">
-          <article>
-            <img src="images/asset-02-1672x941-776384852c.jpeg" alt="単品カテゴリー">
+          <div class="category-card">
+            <img src="images/category__banner-single.jpg" alt="単品カテゴリー">
             <h3>単品</h3>
-            <p>ひとつの特性だけを静かに足したい時の小瓶。今の自分を大きく変えず、足りない部分にだけそっとなじませるためのアイテムです。</p>
-          </article>
-          <article>
-            <img src="images/asset-01-500x750-9016f40933.jpeg" alt="セットカテゴリー">
+            <p>ひとつの特性だけを足したい時の小瓶。今の自分を大きく変えず、足りない部分にだけそっとなじませるためのアイテムです。</p>
+          </div>
+          <div class="category-card">
+            <img src="images/category__banner-set.jpg" alt="セットカテゴリー">
             <h3>セット</h3>
             <p>複数の特性を組み合わせ、性格の輪郭を整える調合品。一気に気分や行動の方向性を変えたい時に選ぶ、少し強めのセットです。</p>
-          </article>
-          <article>
-            <img src="images/asset-05-750x750-025bcb5097.jpeg" alt="体験セットカテゴリー">
+          </div>
+          <div class="category-card">
+            <img src="images/category__banner-sample.jpg" alt="体験セットカテゴリー">
             <h3>体験セット</h3>
             <p>性格を手に入れた感覚を、一時に試せる一過性セット。一時の物語を体験しませんか？</p>
-          </article>
+          </div>
         </div>
       </section>
     </main>
@@ -125,13 +133,14 @@
 
   <footer class="footer">
     <nav class="footer__nav" aria-label="フッター">
-      <a href="#">Legal Notice</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Refund &amp; Shipping</a>
-      <a href="#">Contact</a>
-      <a href="#">About</a>
+      <a href="#" lang="en">Legal Notice</a>
+      <a href="#" lang="en">Privacy Policy</a>
+      <a href="#" lang="en">Refund &amp; Shipping</a>
+      <a href="#" lang="en">Contact</a>
+      <a href="#" lang="en">About</a>
     </nav>
     <small class="footer__copyright">Copyright © 2026, emOCEAM by LIN</small>
   </footer>
 </body>
+
 </html>

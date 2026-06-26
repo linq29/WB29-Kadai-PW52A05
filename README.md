@@ -16,13 +16,13 @@ Figma ▶︎ [WB29-01_PW52A233-05](https://www.figma.com/design/BbfuOfhKdH21gWVt
 
 ## 使用技術
 
-- HTML/CSS
+- HTML/CSS/JS
 - Figma（WF、デザインカンプ）
 
 
 ## 制作時期
 
-- 2026年5月〜
+- 2026年5〜6月
 
 
 ## 画像・資料について

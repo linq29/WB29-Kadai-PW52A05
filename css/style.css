@@ -1,4 +1,4 @@
-/* Shared base: index.html and detail.html */
+/* 共通ベース: index.html and detail.html */
 :root {
   --bg: #061323;
   --bg-soft: #1d3558;
@@ -60,7 +60,7 @@ button {
   font: inherit;
 }
 
-/* Shared header: index.html/detail.html <header class="header"> */
+/* 共通ヘッダー: index.html/detail.html <header class="header"> */
 .header {
   height: 60px;
   display: grid;
@@ -116,7 +116,7 @@ button {
   filter: drop-shadow(0 0 5px #16DBFD);
 }
 
-/* Shared page grid: index.html/detail.html <div class="grid"> */
+/* 共通ページグリッド: index.html/detail.html <div class="grid"> */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -125,7 +125,7 @@ button {
   padding: 40px var(--grid-margin) 80px;
 }
 
-/* Shared sidebar: index.html/detail.html <aside class="sidebar"> */
+/* 共通サイドバー: index.html/detail.html <aside class="sidebar"> */
 .sidebar {
   grid-column: 1 / span 2;
   color: #eef6ff;
@@ -150,7 +150,7 @@ button {
   font-weight: 700;
 }
 
-/* Shared main content area: index.html/detail.html <main class="grid__content"> */
+/* 共通メインコンテンツ: index.html/detail.html <main class="grid__content"> */
 .grid__content {
   grid-column: 3 / -1;
   display: grid;
@@ -159,7 +159,7 @@ button {
   min-width: 0;
 }
 
-/* index.html hero */
+/* index.html メインビジュアル */
 .hero {
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
@@ -189,7 +189,7 @@ button {
   letter-spacing: 2px;
 }
 
-/* Shared section title: index.html sections and detail.html related/review sections */
+/* 共通セクションタイトル: index.html の各セクション、detail.html の関連/レビューセクション */
 .section {
   grid-column: 1 / -1;
   margin-top: 78px;
@@ -212,7 +212,7 @@ button {
   text-shadow: none;
 }
 
-/* Product cards: index.html new items; detail.html related items */
+/* 商品カード: index.html 新入荷アイテム、detail.html 関連アイテム */
 .product-list {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -248,7 +248,7 @@ button {
   color: #F4FD7E;
 }
 
-/* index.html about section */
+/* index.html emOCEAN紹介セクション */
 .about {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -282,7 +282,7 @@ button {
   color: var(--muted);
 }
 
-/* index.html category section */
+/* index.html カテゴリーセクション */
 .category-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -307,7 +307,7 @@ button {
   font-weight: 400;
 }
 
-/* Shared footer: index.html/detail.html <footer class="footer"> */
+/* 共通フッター: index.html/detail.html <footer class="footer"> */
 .footer {
   position: relative;
   overflow: hidden;
@@ -351,7 +351,7 @@ button {
   grid-column: 1 / -1;
 }
 
-/* detail.html breadcrumb */
+/* detail.html パンくずリスト */
 .breadcrumb {
   grid-column: 1 / -1;
   margin: 0 0 14px;
@@ -365,7 +365,7 @@ button {
   margin-inline: 0.4em;
 }
 
-/* detail.html product detail */
+/* detail.html 商品詳細 */
 .product-detail {
   grid-column: 1 / -1;
   display: grid;
@@ -494,7 +494,7 @@ details p {
   text-align: justify;
 }
 
-/* detail.html reviews */
+/* detail.html レビュー */
 .review-list {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -564,7 +564,7 @@ details p {
   text-shadow: var(--glow);
 }
 
-/* detail.html review modal */
+/* detail.html レビューモーダル */
 .review-modal {
   width: min(620px, calc(100% - 40px));
   padding: 0;

@@ -1,3 +1,4 @@
+/* Shared base: index.html and detail.html */
 :root {
   --bg: #061323;
   --bg-soft: #1d3558;
@@ -55,6 +56,11 @@ img {
   width: 100%;
 }
 
+button {
+  font: inherit;
+}
+
+/* Shared header: index.html/detail.html <header class="header"> */
 .header {
   height: 60px;
   display: grid;
@@ -74,16 +80,6 @@ img {
   width: auto;
   height: 100%;
   filter: none;
-  /* transition: filter 0.3s ease; */
-}
-
-/* .header__brand:hover img,
-.header__brand:focus-visible img {
-  filter: drop-shadow(0 0 5px #16DBFD);
-} */
-
-.header__brand span {
-  font-size: 1.05em;
 }
 
 .header__actions {
@@ -102,6 +98,11 @@ img {
   height: 42px;
 }
 
+.header__actions a:hover,
+.header__actions a:focus-visible {
+  filter: none;
+}
+
 .header__actions img {
   width: 34px;
   height: 34px;
@@ -115,6 +116,7 @@ img {
   filter: drop-shadow(0 0 5px #16DBFD);
 }
 
+/* Shared page grid: index.html/detail.html <div class="grid"> */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -123,6 +125,7 @@ img {
   padding: 40px var(--grid-margin) 80px;
 }
 
+/* Shared sidebar: index.html/detail.html <aside class="sidebar"> */
 .sidebar {
   grid-column: 1 / span 2;
   color: #eef6ff;
@@ -147,6 +150,7 @@ img {
   font-weight: 700;
 }
 
+/* Shared main content area: index.html/detail.html <main class="grid__content"> */
 .grid__content {
   grid-column: 3 / -1;
   display: grid;
@@ -155,6 +159,7 @@ img {
   min-width: 0;
 }
 
+/* index.html hero */
 .hero {
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;
@@ -184,6 +189,7 @@ img {
   letter-spacing: 2px;
 }
 
+/* Shared section title: index.html sections and detail.html related/review sections */
 .section {
   grid-column: 1 / -1;
   margin-top: 78px;
@@ -206,22 +212,11 @@ img {
   text-shadow: none;
 }
 
+/* Product cards: index.html new items; detail.html related items */
 .product-list {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
   gap: var(--grid-gap);
-}
-
-.product-list--new {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.product-list--related {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.product-list--single {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .product-card {
@@ -244,17 +239,21 @@ img {
 }
 
 .product-card span,
-.product-detail__price,
-.product-card__consultation {
+.product-detail__price {
   color: var(--accent);
   font-weight: 800;
 }
 
+.product-card:hover .product-card__contact {
+  color: #F4FD7E;
+}
+
+/* index.html about section */
 .about {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
   column-gap: var(--grid-gap);
-  align-items: start;
+  align-items: center;
 }
 
 .about__image {
@@ -279,9 +278,11 @@ img {
 
 .about p {
   margin: 0 0 18px;
+  text-align: justify;
   color: var(--muted);
 }
 
+/* index.html category section */
 .category-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -306,6 +307,51 @@ img {
   font-weight: 400;
 }
 
+/* Shared footer: index.html/detail.html <footer class="footer"> */
+.footer {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  padding: 70px var(--grid-margin) 46px;
+  background: var(--bg-soft);
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/bg.jpg") 40% / cover;
+  opacity: 0.4;
+}
+
+.footer__nav {
+  position: relative;
+  grid-column: 2 / span 10;
+  margin: 0 0 58px;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.footer__nav a {
+  grid-column: span 2;
+}
+
+.footer a,
+.footer__copyright {
+  color: var(--muted);
+}
+
+.footer__copyright {
+  position: relative;
+  grid-column: 1 / -1;
+}
+
+/* detail.html breadcrumb */
 .breadcrumb {
   grid-column: 1 / -1;
   margin: 0 0 14px;
@@ -319,6 +365,7 @@ img {
   margin-inline: 0.4em;
 }
 
+/* detail.html product detail */
 .product-detail {
   grid-column: 1 / -1;
   display: grid;
@@ -348,7 +395,12 @@ img {
 
 .product-detail__price {
   margin: 0 0 32px;
-  font-size: 19px;
+  font-size: 18px;
+}
+
+.product-detail__tax-in {
+  font-size: 0.8em;
+  margin-left: 0.5em;
 }
 
 .product-detail__info h2 {
@@ -360,16 +412,13 @@ img {
 .product-detail__info p {
   color: #e2edf8;
   font-weight: 400;
+  text-align: justify;
 }
 
 .product-detail__sizes {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--grid-gap);
-}
-
-button {
-  font: inherit;
 }
 
 .product-detail__size-button {
@@ -422,6 +471,7 @@ summary {
   padding: 13px 0;
   cursor: pointer;
   list-style: none;
+  transition: filter 0.3s ease;
 }
 
 summary::-webkit-details-marker {
@@ -432,12 +482,19 @@ summary::after {
   content: "v";
 }
 
+summary:hover,
+summary:focus-visible {
+  filter: drop-shadow(0 0 5px #16DBFD);
+}
+
 details p {
   margin: 0 0 14px;
   color: var(--muted);
   font-size: 16px;
+  text-align: justify;
 }
 
+/* detail.html reviews */
 .review-list {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
@@ -461,69 +518,89 @@ details p {
   object-fit: cover;
 }
 
-.review-card h3 {
+.review-card__user {
   align-self: center;
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+
+.review-card__user p {
   margin: 0;
   font-size: 18px;
   font-weight: var(--font-heading-weight);
 }
 
-.review-card p {
+.review-card__text {
   grid-column: 1 / -1;
   align-self: start;
+}
+
+.review-card__text p {
   margin: 0;
   color: #e8f2fc;
   font-weight: 400;
+  text-align: justify;
 }
 
-.empty-state {
-  color: #eef6ff;
+.review-card__time {
+  font-size: 0.8em;
   font-weight: 400;
-}
-
-.grid__content--tall {
-  min-height: 1670px;
-}
-
-.footer {
-  position: relative;
-  overflow: hidden;
-  min-height: 220px;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--grid-gap);
-  padding: 70px var(--grid-margin) 46px;
-  background: var(--bg-soft);
-  text-align: center;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../images/bg.jpg") 40% / cover;
-  opacity: 0.4;
-}
-
-.footer__nav {
-  position: relative;
-  grid-column: 2 / span 10;
-  margin: 0 0 58px;
-  display: grid;
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-  gap: var(--grid-gap);
-}
-
-.footer__nav a {
-  grid-column: span 2;
-}
-
-.footer a,
-.footer__copyright {
   color: var(--muted);
 }
 
-.footer__copyright {
+.review-card__expand {
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.4s ease;
+}
+
+.review-card__expand:hover,
+.review-card__expand:focus-visible {
+  text-shadow: var(--glow);
+}
+
+/* detail.html review modal */
+.review-modal {
+  width: min(620px, calc(100% - 40px));
+  padding: 0;
+  color: var(--text);
+  background: rgba(11, 29, 51, 0.96);
+  border: 1px solid var(--line);
+}
+
+.review-modal::backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.review-modal__inner {
   position: relative;
-  grid-column: 1 / -1;
+  padding: 34px 38px;
+}
+
+.review-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.review-modal .review-card__user {
+  margin: 0 0 18px;
+  color: var(--accent);
+}
+
+.review-modal__text {
+  margin: 0;
+  color: #e8f2fc;
+  font-family: var(--font-ja);
 }

@@ -8,7 +8,9 @@
   <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400&family=M+PLUS+1p:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400&family=M+PLUS+1p:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -66,16 +68,19 @@
         <img class="product-detail__image" src="images/item-kichoumen.jpg" alt="夜更けの几帳面">
         <div class="product-detail__info">
           <h1>C / 夜更けの几帳面</h1>
-          <p class="product-detail__price">¥ 888,000 (税込)</p>
+          <p class="product-detail__price">¥ 888,000<span class="product-detail__tax-in">(税込)</span></p>
           <h2>規格</h2>
           <div class="product-detail__sizes">
-            <button class="product-detail__size-button product-detail__size-button--selected" type="button" aria-pressed="true">1ml</button>
+            <button class="product-detail__size-button product-detail__size-button--selected" type="button"
+              aria-pressed="true">1ml</button>
             <button class="product-detail__size-button" type="button" aria-pressed="false">3ml</button>
             <button class="product-detail__size-button" type="button" aria-pressed="false">5ml</button>
             <button class="product-detail__size-button" type="button" aria-pressed="false">7ml</button>
           </div>
           <h2>説明</h2>
-          <p>ここには、商品詳細ページに掲載する、出品者が書いたアイテム説明文が入ります。<br>出品者から提供された性格の特性や、アイテムの特徴、使用時のイメージ、注意事項などを200文字程度で記載します。<br>サイト全体の世界観に合わせ、神秘的でやさしく、少し物語性のある表現を想定しています。</p>
+          <p>
+            ここには、商品詳細ページに掲載する、出品者が書いたアイテム説明文が入ります。<br>出品者から提供された性格の特性や、アイテムの特徴、使用時のイメージ、注意事項などを200文字程度で記載します。<br>サイト全体の世界観に合わせ、神秘的でやさしく、少し物語性のある表現を想定しています。
+          </p>
           <button class="product-detail__cart-button">カートに入れる</button>
           <details>
             <summary>詳細</summary>
@@ -91,59 +96,103 @@
       <section class="section">
         <h2 class="section__title">関連アイテム<span lang="en">/ related items</span></h2>
         <div class="product-list product-list--related">
-          <a class="product-card" href="#"><img src="images/item-reisei.jpg" alt="逃げ足の冷静さ"><strong>N /
-              逃げ足の冷静さ</strong><span>¥ 888,000</span></a>
-          <a class="product-card" href="#"><img src="images/item-shincho.jpg" alt="余白を測る慎重さ"><strong>N /
-              余白を測る慎重さ</strong><span>¥ 888,000</span></a>
-          <a class="product-card" href="#"><img src="images/item-kansuiyoku.jpg" alt="静かな完遂欲"><strong>C /
-              静かな完遂欲</strong><span>¥ 888,000</span></a>
-          <a class="product-card" href="detail.html"><img src="images/item-shunen.jpg"
-              alt="秒針まで揃える執念"><strong>C / 秒針まで揃える執念</strong><span>対価要相談</span></a>
+          <a class="product-card" href="#">
+            <img src="images/item-reisei.jpg" alt="逃げ足の冷静さ">
+            <strong>N / 逃げ足の冷静さ</strong>
+            <span>¥ 888,000</span>
+          </a>
+          <a class="product-card" href="#">
+            <img src="images/item-shincho.jpg" alt="余白を測る慎重さ">
+            <strong>N / 余白を測る慎重さ</strong>
+            <span>¥ 888,000</span>
+          </a>
+          <a class="product-card" href="#">
+            <img src="images/item-kansuiyoku.jpg" alt="静かな完遂欲">
+            <strong>C / 静かな完遂欲</strong>
+            <span>¥ 888,000</span>
+          </a>
+          <a class="product-card" href="detail.html">
+            <img src="images/item-shunen.jpg" alt="秒針まで揃える執念">
+            <strong>C / 秒針まで揃える執念</strong>
+            <span class="product-card__contact">対価要相談</span>
+          </a>
         </div>
       </section>
 
       <section class="section">
         <h2 class="section__title">レビュー<span lang="en">/ reviews</span></h2>
         <div class="review-list">
-          <article class="review-card"><img src="images/user-icon-1.jpeg" alt="">
-            <h3>ユーザ名　2000年10月10日</h3>
-            <p>ここには、購入者によるレビュー文が入ります。アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを200文字程度で記載します。（展開）</p>
+          <article class="review-card">
+            <img src="images/user-icon-1.jpeg" alt="ユーザーアイコン">
+            <div class="review-card__user">
+              <p class="review-card__user-name">ユーザ名</p>
+              <p class="review-card__time">2000年10月10日</p>
+            </div>
+            <div class="review-card__text">
+              <p>ここには、購入者によるレビュー文が入ります。アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを200文字程度で記載します。<button
+                  class="review-card__expand" type="button"
+                  data-review-text="ここには、購入者によるレビュー文が入ります。アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを200文字程度で記載します。最初は半信半疑でしたが、数日使ってみると、迷っていた場面で自然に一歩踏み出せるようになりました。自分の中に足りないと思っていた誠実さが、少しだけ輪郭を持って現れたように感じています。">（展開）</button>
+              </p>
+            </div>
           </article>
-          <article class="review-card"><img src="images/user-icon-2.jpeg" alt="">
-            <h3>ユーザ名　2000年10月10日</h3>
-            <p>ここには、購入者によるレビュー文が入ります❤</p>
+          <article class="review-card">
+            <img src="images/user-icon-2.jpeg" alt="ユーザーアイコン">
+            <div class="review-card__user">
+              <p class="review-card__user-name">ユーザ名</p>
+              <p class="review-card__time">2000年10月10日</p>
+            </div>
+            <div class="review-card__text">
+              <p>ここには、購入者によるレビュー文が入ります❤</p>
+            </div>
           </article>
-          <article class="review-card"><img src="images/user-icon-3.jpeg" alt="">
-            <h3>ユーザ名　2000年10月10日</h3>
-            <p>アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを記載します。</p>
+          <article class="review-card">
+            <img src="images/user-icon-3.jpeg" alt="ユーザーアイコン">
+            <div class="review-card__user">
+              <p class="review-card__user-name">ユーザ名</p>
+              <p class="review-card__time">2000年10月10日</p>
+            </div>
+            <div class="review-card__text">
+              <p>アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを記載します。</p>
+            </div>
           </article>
-          <article class="review-card"><img src="images/user-icon-default.jpeg" alt="">
-            <h3>ユーザ名　2000年10月10日</h3>
-            <p>ここには、購入者によるレビュー文が入ります。アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを200文字程度で記載します。（展開）</p>
+          <article class="review-card">
+            <img src="images/user-icon-default.jpeg" alt="ユーザーアイコン">
+            <div class="review-card__user">
+              <p class="review-card__user-name">ユーザ名</p>
+              <p class="review-card__time">2000年10月10日</p>
+            </div>
+            <div class="review-card__text">
+              <p>ここには、購入者によるレビュー文が入ります。アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを200文字程度で記載します。<button
+                  class="review-card__expand" type="button"
+                  data-review-text="ここには、購入者によるレビュー文が入ります。アイテムを使用したときの印象や、性格の変化をどのように感じたか、使用前後の気持ちの違いなどを200文字程度で記載します。使用前は細かな予定のズレにすぐ疲れていましたが、今は必要なことと手放してよいことを分けて考えられるようになりました。強い変化というより、日々の判断が少し静かになった感覚です。">（展開）</button>
+              </p>
+            </div>
           </article>
         </div>
       </section>
     </main>
   </div>
 
+  <dialog class="review-modal" aria-labelledby="review-modal-title">
+    <div class="review-modal__inner">
+      <button class="review-modal__close" type="button" aria-label="閉じる">×</button>
+      <div class="review-card__user">
+        <p class="review-card__user-name" id="review-modal-title">ユーザ名</p>
+        <p class="review-card__time">2000年10月10日</p>
+      </div>
+      <p class="review-modal__text"></p>
+    </div>
+  </dialog>
+
   <footer class="footer">
-    <nav class="footer__nav" aria-label="フッター"><a href="#" lang="en">Legal Notice</a><a href="#" lang="en">Privacy Policy</a><a
-        href="#" lang="en">Refund &amp; Shipping</a><a href="#" lang="en">Contact</a><a href="#" lang="en">About</a></nav>
+    <nav class="footer__nav" aria-label="フッター"><a href="#" lang="en">Legal Notice</a><a href="#" lang="en">Privacy
+        Policy</a><a href="#" lang="en">Refund &amp; Shipping</a><a href="#" lang="en">Contact</a><a href="#"
+        lang="en">About</a></nav>
     <small class="footer__copyright">Copyright © 2026, emOCEAM by LIN</small>
   </footer>
-  <script>
-    document.querySelectorAll(".product-detail__size-button").forEach((button) => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".product-detail__size-button").forEach((sizeButton) => {
-          sizeButton.classList.remove("product-detail__size-button--selected");
-          sizeButton.setAttribute("aria-pressed", "false");
-        });
 
-        button.classList.add("product-detail__size-button--selected");
-        button.setAttribute("aria-pressed", "true");
-      });
-    });
-  </script>
+  <script src="js/button.js" defer></script>
+  <script src="js/modal.js" defer></script>
 </body>
 
 </html>

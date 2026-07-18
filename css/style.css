@@ -165,7 +165,7 @@ button {
   aspect-ratio: 16 / 9;
   display: grid;
   place-items: center;
-  background: url("../images/bg.jpg") center / cover no-repeat;
+  background: url("../images/bg.webp") center / cover no-repeat;
 }
 
 .hero__copy {
@@ -324,7 +324,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../images/bg.jpg") 40% / cover;
+  background: url("../images/bg.webp") 40% / cover;
   opacity: 0.4;
 }
 
